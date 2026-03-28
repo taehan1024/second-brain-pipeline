@@ -1,0 +1,394 @@
+# ── Pipeline Defaults ───────────────────────────────────────────────────────
+defaults:
+  max_papers: 10        # per topic
+  min_citations: 20     # minimum Semantic Scholar citations
+  days_back: 365        # how far back to search
+  arxiv_delay_sec: 3.0  # between arXiv API calls (be polite)
+  s2_delay_sec: 1.5     # between Semantic Scholar API calls
+
+# ── arXiv Category Filters ─────────────────────────────────────────────────
+# All downloads are filtered to papers in these categories.
+# See https://arxiv.org/category_taxonomy for full list.
+categories:
+  # Computer Science
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  - cs.IT
+  - cs.LG
+  - cs.NE
+  - cs.DS
+  - cs.RO
+  - cs.DB
+  - cs.DM
+  - cs.GT
+  - cs.ET
+  - cs.MA
+  - cs.SE
+  # Statistics
+  - stat.AP
+  - stat.CO
+  - stat.ME
+  - stat.ML
+  - stat.TH
+  # Mathematics
+  - math.FA
+  - math.NA
+  - math.OC
+  - math.PR
+  - math.SP
+  - math.ST
+  # Quantitative Finance
+  - q-fin.MF
+  - q-fin.PM
+  - q-fin.PR
+  - q-fin.RM
+  - q-fin.ST
+  - q-fin.TR
+  - q-fin.CP
+  - q-fin.EC
+  - q-fin.GN
+  # Economics
+  - econ.EM
+  - econ.GN
+  - econ.TH
+
+# ── Search Topics ──────────────────────────────────────────────────────────
+# Each entry is a free-text search query sent to the arXiv API.
+# Organized by research area — add, remove, or edit freely.
+topics:
+
+  # Foundation Models & LLM Systems
+  foundation_models_llm:
+    - "large language model scaling laws"
+    - "transformer architecture variants advanced"
+    - "mixture of experts routing transformers"
+    - "retrieval augmented generation systems"
+    - "in context learning theory mechanisms"
+    - "instruction tuning alignment methods"
+    - "tool augmented LLM agents"
+    - "multimodal foundation models vision language"
+    - "long context LLM architectures"
+    - "efficient transformer scaling methods"
+
+  # Generative Modeling
+  generative_modeling:
+    - "diffusion models theory and scaling"
+    - "score based generative modeling"
+    - "flow matching generative models"
+    - "consistency models generative"
+    - "diffusion transformer hybrid"
+    - "latent diffusion architecture scaling"
+    - "generative modeling evaluation metrics"
+    - "energy based models modern"
+    - "autoregressive vs diffusion tradeoffs"
+    - "discrete diffusion models"
+
+  # Uncertainty, Bayesian & Robustness
+  uncertainty_bayesian:
+    - "bayesian deep learning methods"
+    - "uncertainty quantification neural networks"
+    - "out of distribution detection methods"
+    - "model calibration probabilistic deep learning"
+    - "ensemble methods deep learning uncertainty"
+    - "variational inference deep learning"
+    - "approximate Bayesian inference scalable"
+    - "posterior predictive uncertainty models"
+    - "distribution shift robustness ML"
+    - "conformal prediction machine learning"
+
+  # Structure & Reasoning
+  structure_reasoning:
+    - "causal inference machine learning modern"
+    - "causal representation learning"
+    - "graph neural networks scaling"
+    - "relational inductive biases deep learning"
+    - "program synthesis neural methods"
+    - "neuro symbolic reasoning systems"
+    - "probabilistic programming inference"
+    - "logical reasoning neural networks"
+    - "symbolic regression modern ML"
+    - "decision making under uncertainty models"
+
+  # Representation Learning
+  representation_learning:
+    - "self supervised learning modern methods"
+    - "contrastive learning theory and practice"
+    - "representation learning invariance equivariance"
+    - "embedding space geometry deep learning"
+    - "metric learning advanced methods"
+    - "disentangled representation learning"
+    - "multi view representation learning"
+    - "latent variable models deep learning"
+    - "manifold learning modern neural methods"
+    - "feature learning theory deep networks"
+
+  # Optimization & Training Dynamics
+  optimization_training:
+    - "deep learning optimization landscapes"
+    - "implicit bias gradient descent"
+    - "stochastic optimization theory modern"
+    - "adaptive optimization algorithms analysis"
+    - "large scale training stability methods"
+    - "sharpness aware minimization"
+    - "curriculum learning optimization"
+    - "meta learning optimization methods"
+    - "bilevel optimization machine learning"
+    - "online convex optimization advanced"
+    - "convex optimization"
+    - "stochastic gradient descent"
+    - "proximal gradient"
+    - "bayesian optimization"
+    - "zeroth order optimization"
+    - "mirror descent"
+    - "frank wolfe algorithm"
+    - "semidefinite programming"
+    - "nonconvex optimization"
+    - "second order optimization"
+
+  # Test-Time & Inference Scaling
+  inference_scaling:
+    - "test time adaptation models"
+    - "self consistency decoding"
+    - "tree of thought reasoning"
+    - "graph of thought reasoning"
+    - "deliberate reasoning LLM"
+    - "adaptive computation time"
+    - "early exiting transformers"
+    - "dynamic routing inference"
+    - "budgeted inference neural networks"
+    - "test time training distribution shift"
+    - "test time compute scaling"
+    - "speculative decoding"
+
+  # Memory & Long Context
+  memory_long_context:
+    - "long context attention mechanisms"
+    - "external memory neural networks"
+    - "retrieval augmented memory architectures"
+    - "vector database indexing ANN"
+    - "memory augmented transformers"
+    - "persistent agent memory systems"
+    - "context compression LLM"
+    - "hierarchical memory models"
+    - "streaming transformers sequence modeling"
+    - "recurrent memory transformers"
+
+  # Agents & Autonomous Systems
+  agents:
+    - "autonomous LLM agents planning"
+    - "multi agent coordination LLM"
+    - "tool augmented reasoning systems"
+    - "agent environment interaction learning"
+    - "self improving AI agents"
+    - "reflection and critique loops LLM"
+    - "planning with world models agents"
+    - "task decomposition LLM"
+    - "agent evaluation frameworks"
+    - "LLM agent tool use"
+
+  # Alignment & Safety
+  alignment_safety:
+    - "AI safety alignment methods"
+    - "constitutional AI"
+    - "direct preference optimization DPO"
+    - "reward model overoptimization"
+    - "AI alignment interpretability synergy"
+    - "inverse reinforcement learning human values"
+    - "cooperative AI alignment"
+    - "scalable oversight debate methods"
+    - "AI deception and goal misgeneralization"
+    - "red teaming large language models"
+    - "jailbreak attacks LLM"
+    - "mechanistic interpretability transformers"
+    - "interpretability deep learning methods"
+    - "superposition polysemanticity"
+    - "adversarial robustness"
+    - "AI safety scalable oversight"
+
+  # Systems & Efficiency
+  systems_efficiency:
+    - "distributed training large models"
+    - "model parallelism pipeline parallelism"
+    - "efficient inference large language models"
+    - "quantization neural networks"
+    - "pruning deep neural networks"
+    - "knowledge distillation advanced methods"
+    - "low rank adaptation LORA methods"
+    - "hardware aware neural architecture search"
+    - "compilation optimization ML systems"
+    - "memory efficient training techniques"
+    - "on device machine learning"
+    - "edge AI model compression"
+    - "tinyML systems design"
+
+  # Multimodal & Generative Systems
+  multimodal:
+    - "audio language models"
+    - "speech to speech generation"
+    - "3D generative models"
+    - "video diffusion temporal consistency"
+    - "multimodal alignment contrastive learning advanced"
+    - "grounded language perception action"
+    - "image editing diffusion control"
+    - "text to video generation"
+    - "vision transformer"
+    - "vision language model"
+    - "multi modal document understanding"
+
+  # Data-Centric AI
+  data_centric:
+    - "data quality scaling laws"
+    - "synthetic data generation pipelines"
+    - "data attribution machine learning"
+    - "dataset distillation"
+    - "active learning modern deep learning"
+    - "weak supervision labeling"
+    - "self training pseudo labeling"
+    - "data mixture optimization"
+
+  # Time Series & Sequential Modeling
+  time_series:
+    - "time series deep learning transformers"
+    - "state space models time series inference"
+    - "probabilistic forecasting deep learning"
+    - "irregular time series modeling"
+    - "sequence modeling long horizon prediction"
+    - "temporal point processes modern ML"
+    - "financial time series deep models"
+    - "multivariate time series representation learning"
+    - "causal time series inference"
+    - "online time series learning"
+    - "time series foundation model"
+    - "financial time series foundation model"
+
+  # Reinforcement Learning
+  reinforcement_learning:
+    - "offline reinforcement learning methods"
+    - "model based reinforcement learning modern"
+    - "reinforcement learning with foundation models"
+    - "policy optimization theory advanced"
+    - "exploration strategies reinforcement learning"
+    - "multi agent reinforcement learning systems"
+    - "hierarchical reinforcement learning"
+    - "inverse reinforcement learning modern"
+    - "bandits contextual bandits advanced"
+    - "safe reinforcement learning constraints"
+    - "reinforcement learning portfolio"
+
+  # Sparse & High-Dimensional Statistics
+  high_dim_statistics:
+    - "sparse estimation high dimensional statistics"
+    - "compressed sensing modern algorithms"
+    - "lasso variants high dimensional inference"
+    - "structured sparsity models"
+    - "low rank matrix estimation methods"
+    - "random matrix theory machine learning"
+    - "high dimensional asymptotics deep learning"
+    - "sketching algorithms large scale ML"
+    - "feature selection high dimensional data"
+    - "signal recovery inverse problems ML"
+    - "high dimensional statistics"
+    - "functional data analysis"
+    - "tensor decomposition"
+    - "principal component analysis"
+    - "lasso regularization"
+    - "matrix completion"
+    - "gaussian process"
+    - "nonparametric statistics"
+    - "kernel methods"
+    - "reproducing kernel hilbert space"
+    - "high dimensional covariance estimation"
+
+  # Probabilistic Models & Theory
+  probabilistic_models:
+    - "probabilistic graphical models modern"
+    - "variational autoencoders advanced theory"
+    - "normalizing flows advanced methods"
+    - "stochastic processes machine learning"
+    - "markov chain monte carlo scalable"
+    - "information theory machine learning"
+    - "entropy regularization methods"
+    - "statistical learning theory generalization"
+    - "PAC bayes bounds modern"
+    - "measure concentration inequalities ML"
+    - "variational inference"
+    - "expectation maximization"
+    - "multiple testing"
+    - "PAC learning computational complexity"
+    - "neural tangent kernel"
+    - "grokking generalization"
+    - "lottery ticket hypothesis"
+    - "double descent phenomenon"
+
+  # LLM Reasoning & Evaluation
+  llm_reasoning:
+    - "large language model reasoning"
+    - "LLM alignment RLHF"
+    - "language model hallucination"
+    - "LLM evaluation benchmark"
+    - "in context learning theory"
+    - "prompt engineering systematic"
+    - "code generation LLM"
+    - "benchmark contamination leakage"
+    - "automated evaluation LLM judge"
+    - "capability vs alignment evaluation"
+
+  # Applied ML
+  applied_ml:
+    - "survival analysis"
+    - "mixed effects model"
+    - "anomaly detection"
+    - "gradient boosting"
+    - "interpretable machine learning"
+    - "sports analytics"
+    - "spatiotemporal sports analytics"
+    - "Bayesian hierarchical sports"
+    - "scientific machine learning physics informed"
+    - "neural PDE solvers operators"
+    - "climate modeling machine learning"
+    - "healthcare survival analysis modern"
+    - "geometric deep learning manifolds"
+    - "topological data analysis machine learning"
+    - "bioinformatics deep learning"
+    - "materials discovery machine learning"
+    - "knowledge graph embedding"
+    - "embodied AI robotics"
+
+  # Quantitative Finance
+  quant_finance:
+    - "quantitative finance deep learning models"
+    - "portfolio optimization"
+    - "stochastic volatility"
+    - "deep hedging"
+    - "option pricing machine learning"
+    - "factor model finance"
+    - "market microstructure"
+    - "limit order book"
+    - "cryptocurrency price prediction"
+    - "regime switching"
+    - "risk measures"
+    - "volatility forecasting"
+    - "alpha factor discovery"
+
+  # Core ML Methods
+  core_ml:
+    - "neural network"
+    - "transformer architecture"
+    - "large language model"
+    - "reinforcement learning"
+    - "diffusion model"
+    - "graph neural network"
+    - "contrastive learning"
+    - "self supervised learning"
+    - "mixture of experts"
+    - "state space model"
+    - "retrieval augmented generation"
+    - "chain of thought reasoning"
+    - "meta learning"
+    - "federated learning"
+    - "knowledge distillation"
+    - "continual learning catastrophic forgetting"
+    - "neural architecture search"
+    - "neural scaling laws"
+    - "causal inference"

@@ -1,0 +1,43 @@
+# Downloaded PDFs (large, copyright)
+scripts/arxiv_pdfs/
+
+# Vault paper content (copyright)
+10-Knowledge/arxiv_mds/
+10-Knowledge/metadata/
+
+# Pipeline state
+scripts/_download_log.json
+_download_log.json
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment
+.env
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Project data and results (personal)
+30-Projects/active/*/data/
+30-Projects/active/*/results/
