@@ -53,7 +53,7 @@ make tag
 make search QUERY="diffusion models"
 
 # Find knowledge gaps
-make gaps TOPIC="options pricing with machine learning"
+make gaps TOPIC="reinforcement learning"
 ```
 
 ---
