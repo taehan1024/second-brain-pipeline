@@ -99,8 +99,6 @@ If you were exploring "diffusion models for finance," the workflow would look li
 5. Run `make search QUERY="diffusion"` or `make gaps TOPIC="diffusion models for finance"` to inspect coverage.
 6. Open the vault in Obsidian and use graph view to see how the new notes connect to adjacent topics like forecasting, uncertainty, or generative modeling.
 
-This is usually easier to understand than a purely abstract workflow.
-
 ---
 
 ## Knowledge Gap Analysis
