@@ -21,7 +21,7 @@ The core idea is simple: this repo shows how I design systems that transform mes
 ## Workflow At A Glance
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["arXiv + Semantic Scholar"] --> B["Download PDFs + metadata stubs"]
     B --> C["Convert PDFs to markdown notes"]
     C --> D["Tag papers by topic, method, and domain"]
