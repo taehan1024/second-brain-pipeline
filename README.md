@@ -1,8 +1,50 @@
 # second-brain-pipeline
 
-A Python pipeline that downloads arXiv papers, converts them to markdown, tags them, and powers a searchable knowledge vault — built on top of Obsidian.
+A Python pipeline that turns scattered research papers into an explorable Obsidian knowledge vault: download from arXiv, convert to markdown, tag themes, and surface connections you can actually reuse in projects.
 
 No API keys required. Both arXiv and Semantic Scholar are public APIs.
+
+---
+
+## Why This Project Is Interesting
+
+Most research tooling stops at "collect papers." This project goes one step further:
+
+- It turns papers into reusable markdown notes instead of a folder of forgotten PDFs.
+- It builds structured metadata so topics, methods, and gaps become searchable.
+- It supports an actual research loop: collect -> connect -> synthesize -> build.
+
+The core idea is simple: this repo shows how I design systems that transform messy information into something operational and decision-ready.
+
+---
+
+## Workflow At A Glance
+
+```mermaid
+flowchart LR
+    A["arXiv + Semantic Scholar"] --> B["Download PDFs + metadata stubs"]
+    B --> C["Convert PDFs to markdown notes"]
+    C --> D["Tag papers by topic, method, and domain"]
+    D --> E["Search vault and detect knowledge gaps"]
+    E --> F["Write synthesis notes for active projects"]
+    F --> G["Build faster with connected context"]
+```
+
+The pipeline is opinionated: read fewer papers, connect them better, and preserve the useful parts for future work.
+
+---
+
+## Example Outcome
+
+Here is the kind of workflow this repo is built for:
+
+1. Start with a problem like "diffusion models for time-series forecasting."
+2. Download recent, high-signal papers from arXiv.
+3. Convert them into markdown notes inside Obsidian.
+4. Auto-tag recurring ideas such as `diffusion-models`, `time-series`, `forecasting`, and `uncertainty`.
+5. Search the vault later and immediately see related methods, missing areas, and adjacent topics worth exploring.
+
+Instead of re-researching from scratch, the vault becomes a connected map of what you already know.
 
 ---
 
@@ -21,6 +63,26 @@ vault_search.py       →  search, gap analysis, project-aware filtering
 ```
 
 Papers are filtered by citation count (default: ≥20) so you only read high-signal work.
+
+---
+
+## Best Way To Experience It
+
+The most compelling presentation is not a long workflow document by itself. For this project, the strongest combination is:
+
+1. A short visual overview in this README.
+2. One concrete example showing how a paper moves through the system.
+3. A short GIF or screenshot set showing the Obsidian graph, tags, and search flow.
+4. The deeper technical reference in `docs/workflow.md`.
+
+If you add media, focus on the "aha" moment:
+
+- tagging a new paper
+- seeing linked notes appear
+- running a search or gap check
+- opening the graph view to show connected topics
+
+That tells the story faster than a text-only process diagram.
 
 ---
 
@@ -105,7 +167,7 @@ topics:
 | `tag_metadata.py` | Enriches metadata cards with content-based tags. |
 | `vault_search.py` | Search by tag/query/citation, identify knowledge gaps, export results. |
 
-See [docs/workflow.md](docs/workflow.md) for the full research workflow.
+See [docs/workflow.md](docs/workflow.md) for the full step-by-step workflow and project loop.
 
 ---
 

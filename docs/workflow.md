@@ -1,6 +1,8 @@
 # Research Workflow
 
-A step-by-step guide to building and using your second-brain pipeline.
+A step-by-step guide to using the pipeline once you want the implementation details.
+
+This document is the technical companion to the main [README](../README.md). The README should sell the idea quickly; this file should help someone reproduce the workflow.
 
 ---
 
@@ -11,6 +13,20 @@ pip install -r requirements.txt
 ```
 
 Configure your topic areas in `config/topics.yaml` — add, remove, or edit search queries and arXiv categories to match your research focus.
+
+---
+
+## End-To-End Flow
+
+```mermaid
+flowchart TD
+    A["Choose research topics"] --> B["Download PDFs and metadata"]
+    B --> C["Convert PDFs to markdown"]
+    C --> D["Tag notes with themes and methods"]
+    D --> E["Search, audit, and detect gaps"]
+    E --> F["Write synthesis notes"]
+    F --> G["Use the synthesis in a project"]
+```
 
 ---
 
@@ -72,6 +88,21 @@ python3 scripts/vault_search.py --query "cross-sectional returns" --deep   # ful
 
 ---
 
+## Concrete Example
+
+If you were exploring "diffusion models for finance," the workflow would look like this:
+
+1. Add a diffusion-finance query in `config/topics.yaml`.
+2. Run `make download` to collect papers and metadata stubs.
+3. Run `make convert` to create markdown notes in the vault.
+4. Run `make tag` so methods and domains become searchable tags.
+5. Run `make search QUERY="diffusion"` or `make gaps TOPIC="diffusion models for finance"` to inspect coverage.
+6. Open the vault in Obsidian and use graph view to see how the new notes connect to adjacent topics like forecasting, uncertainty, or generative modeling.
+
+This is usually easier to understand than a purely abstract workflow.
+
+---
+
 ## Knowledge Gap Analysis
 
 Find what research is missing for a topic:
@@ -128,3 +159,15 @@ gaps-init → gaps → download → convert → tag → gaps again → synthesiz
 ```
 
 Every project makes the vault stronger for all future projects.
+
+---
+
+## Presentation Suggestions
+
+If you want to make this repo more connectable for recruiters or collaborators, the best additions are:
+
+- A short GIF of papers entering the vault, receiving tags, and appearing in the Obsidian graph.
+- A screenshot trio showing a markdown note, metadata tags, and the resulting graph connections.
+- A small "example project" section in the README that follows one topic from search query to reusable synthesis.
+
+The key is to show the transformation, not just describe it.
