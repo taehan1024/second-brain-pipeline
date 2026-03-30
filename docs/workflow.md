@@ -160,14 +160,3 @@ gaps-init → gaps → download → convert → tag → gaps again → synthesiz
 
 Every project makes the vault stronger for all future projects.
 
----
-
-## Presentation Suggestions
-
-If you want to make this repo more connectable for recruiters or collaborators, the best additions are:
-
-- A short GIF of papers entering the vault, receiving tags, and appearing in the Obsidian graph.
-- A screenshot trio showing a markdown note, metadata tags, and the resulting graph connections.
-- A small "example project" section in the README that follows one topic from search query to reusable synthesis.
-
-The key is to show the transformation, not just describe it.

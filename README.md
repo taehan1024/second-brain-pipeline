@@ -66,25 +66,6 @@ Papers are filtered by citation count (default: ≥20) so you only read high-sig
 
 ---
 
-## Best Way To Experience It
-
-The most compelling presentation is not a long workflow document by itself. For this project, the strongest combination is:
-
-1. A short visual overview in this README.
-2. One concrete example showing how a paper moves through the system.
-3. A short GIF or screenshot set showing the Obsidian graph, tags, and search flow.
-4. The deeper technical reference in `docs/workflow.md`.
-
-If you add media, focus on the "aha" moment:
-
-- tagging a new paper
-- seeing linked notes appear
-- running a search or gap check
-- opening the graph view to show connected topics
-
-That tells the story faster than a text-only process diagram.
-
----
 
 ## Setup
 
